@@ -1,3 +1,5 @@
+alert("Button works");
+
 async function generateVoice() {
   const text = document.getElementById("textInput").value;
 
