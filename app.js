@@ -3,11 +3,11 @@ async function generateVoice() {
 
   const text = document.getElementById("textInput").value;
 
-  // Alternative Parler‑TTS proxy endpoint (more stable)
-  const apiUrl = "https://parler-tts.hf.space/proxy/generate";
+  // Official HuggingFace Parler‑TTS Space endpoint
+  const apiUrl = "https://huggingface.co/spaces/parler-tts/parler-tts/api/predict";
 
   const payload = {
-    text: text
+    data: [text]
   };
 
   try {
@@ -21,8 +21,8 @@ async function generateVoice() {
 
     const result = await response.json();
 
-    // result.audio is base64 WAV
-    const audioBase64 = result.audio;
+    // The Space returns base64 WAV in result.data[0]
+    const audioBase64 = result.data[0];
     const audioUrl = "data:audio/wav;base64," + audioBase64;
 
     document.getElementById("audioPlayer").src = audioUrl;
