@@ -3,8 +3,8 @@ async function generateVoice() {
 
   const text = document.getElementById("textInput").value;
 
-  // Stable CORS‑enabled Parler‑TTS proxy
-  const apiUrl = "https://parler-tts-proxy.deno.dev/generate";
+  // Ultra-stable CORS-enabled Parler-TTS proxy
+  const apiUrl = "https://parler-tts.deno.dev/api/generate";
 
   const payload = {
     text: text
