@@ -3,8 +3,8 @@ async function generateVoice() {
 
   const text = document.getElementById("textInput").value;
 
-  // Working free Parler‑TTS proxy endpoint (Render)
-  const apiUrl = "https://parler-tts-proxy.onrender.com/generate";
+  // Alternative Parler‑TTS proxy endpoint (more stable)
+  const apiUrl = "https://parler-tts.hf.space/proxy/generate";
 
   const payload = {
     text: text
