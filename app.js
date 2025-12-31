@@ -1,6 +1,6 @@
-alert("Button works");
-
 async function generateVoice() {
+  alert("Button works");
+
   const text = document.getElementById("textInput").value;
 
   // Working free Parler-TTS proxy endpoint
@@ -32,4 +32,5 @@ async function generateVoice() {
     alert("Voice generation failed. Check console for details.");
   }
 }
+
 
